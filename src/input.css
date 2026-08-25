@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-ink font-body antialiased;
+  }
+
+  h1, h2, h3 {
+    font-variation-settings: "SOFT" 30, "WONK" 1;
+    @apply font-display;
+  }
+
+  :focus-visible {
+    outline: 3px solid #457B9D;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* --- Signature element: the address bar --- */
+  .browser {
+    @apply rounded-2xl border border-black/10 bg-white shadow-[0_18px_50px_-20px_rgba(38,70,83,0.45)] overflow-hidden;
+  }
+
+  .browser-chrome {
+    @apply flex items-center gap-3 px-4 py-3 bg-cream border-b border-black/5;
+  }
+
+  .dot {
+    @apply h-2.5 w-2.5 rounded-full;
+  }
+
+  .url-field {
+    @apply flex-1 flex items-center gap-2 rounded-full bg-white border border-black/10 px-4 py-2;
+  }
+
+  .caret {
+    @apply inline-block w-[2px] translate-y-[2px] bg-peach;
+    height: 1em;
+    animation: blink 1.05s step-end infinite;
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.18em] font-semibold text-river;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-semibold transition-transform duration-150 will-change-transform;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply btn bg-slate text-white shadow-[0_10px_24px_-12px_rgba(38,70,83,0.9)];
+  }
+
+  .btn-accent {
+    @apply btn bg-peach text-slate shadow-[0_10px_24px_-12px_rgba(244,162,97,0.95)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-slate/25 text-slate hover:bg-cream;
+  }
+
+  .card {
+    @apply rounded-2xl border border-black/[0.07] bg-white p-7;
+  }
+
+  .tick {
+    @apply mt-1 h-5 w-5 shrink-0 text-peach;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .caret { animation: none; opacity: 1; }
+  .btn:hover { transform: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
