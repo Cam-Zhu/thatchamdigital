@@ -38,23 +38,23 @@
   </h1>
   <div class="mt-6 space-y-4 text-lg leading-relaxed">
     <p>
-      This is the only long bit. Fill it in once and I've got what I need to build the whole thing. So there's no back and
+      This is the only long bit. Fill it in once and I've got what I need to build the whole thing — no back and
       forth, no chasing you for your opening hours three weeks from now.
     </p>
     <p>
       Rough answers are fine. I'll tidy up the wording. If you genuinely don't know something, write "not sure" and
-      we'll sort it on a call.
+      we'll sort it on the call.
     </p>
   </div>
 
   <div class="mt-8 rounded-2xl bg-wheat/50 p-5 text-slate">
     <p class="leading-relaxed">
-      <strong class="font-semibold">Takes about 10 minutes.</strong> It doesn't save as you go, so if you're
-      interrupted you'll lose it.
+      <strong class="font-semibold">Takes about 15 minutes.</strong> It doesn't save as you go, so if you're
+      interrupted you'll lose it — best to do it in one sitting with a cup of tea.
     </p>
   </div>
 
-  <form name="onboarding" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" class="mt-12 space-y-10">
+  <form name="onboarding" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="mt-12 space-y-10">
     <input type="hidden" name="form-name" value="onboarding">
     <p class="hidden">
       <label>Leave this empty: <input name="bot-field"></label>
@@ -64,16 +64,16 @@
     <section>
       <h2 class="font-display text-2xl font-semibold text-slate">1. You and the business</h2>
       <div class="fieldset mt-5">
-        <div>
+        <div class="q">
           <label class="label" for="business">Business name</label>
           <span class="hint">Exactly as you want it written on the site, including any Ltd or &amp; Sons.</span>
           <input class="field" type="text" id="business" name="Business name" required>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="name">Your name</label>
           <input class="field" type="text" id="name" name="Your name" required>
         </div>
-        <div class="grid gap-7 sm:grid-cols-2">
+        <div class="q grid gap-7 sm:grid-cols-2">
           <div>
             <label class="label" for="email">Email</label>
             <input class="field" type="email" id="email" name="Email" required>
@@ -83,12 +83,12 @@
             <input class="field" type="tel" id="phone" name="Phone">
           </div>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="oneliner">What do you do, in one sentence?</label>
           <span class="hint">As if you were telling someone at the school gate. "I fix bikes" beats "bicycle maintenance solutions".</span>
           <input class="field" type="text" id="oneliner" name="One-line description" required>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="existing">Anything online already?</label>
           <span class="hint">Old website, Facebook page, Instagram, a Checkatrade listing — paste whatever links you've got.</span>
           <textarea class="field" id="existing" name="Existing online presence"></textarea>
@@ -100,19 +100,19 @@
     <section>
       <h2 class="font-display text-2xl font-semibold text-slate">2. Who you want through the door</h2>
       <div class="fieldset mt-5">
-        <div>
+        <div class="q">
           <label class="label" for="customer">Describe your ideal customer</label>
           <span class="hint">Think of a real one you've had. What were they like, what did they need?</span>
           <textarea class="field" id="customer" name="Ideal customer" required></textarea>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="area">Where do you work?</label>
           <span class="hint">Towns and villages you cover, or how far you'll travel. This feeds straight into how you show up in local searches.</span>
           <input class="field" type="text" id="area" name="Area covered" required>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="why">Why do people pick you over the next name on the list?</label>
-          <span class="hint">The honest answer. This usually becomes the headline.</span>
+          <span class="hint">The honest answer, even if it feels like bragging. This usually becomes the headline.</span>
           <textarea class="field" id="why" name="Why you" required></textarea>
         </div>
       </div>
@@ -122,17 +122,17 @@
     <section>
       <h2 class="font-display text-2xl font-semibold text-slate">3. What you sell</h2>
       <div class="fieldset mt-5">
-        <div>
+        <div class="q">
           <label class="label" for="services">Services, with prices where you can</label>
-          <span class="hint">One per line. Prices are optional but they work. People are far more likely to get in touch when they've got a rough idea what it'll cost. "From £45" is enough.</span>
+          <span class="hint">One per line. Prices are optional but they work — people are far more likely to get in touch when they've got a rough idea what it'll cost. "From £45" is enough.</span>
           <textarea class="field min-h-[10rem]" id="services" name="Services and prices" required></textarea>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="hours">Opening hours</label>
-          <span class="hint">Or "by appointment", or "evenings and weekends". Whatever's true.</span>
+          <span class="hint">Or "by appointment", or "evenings and weekends" — whatever's true.</span>
           <input class="field" type="text" id="hours" name="Opening hours">
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="address">Address shown on the site</label>
           <span class="hint">Leave blank if you work from home and would rather not. It's not required, though a town name does help you locally.</span>
           <input class="field" type="text" id="address" name="Public address">
@@ -144,7 +144,7 @@
     <section>
       <h2 class="font-display text-2xl font-semibold text-slate">4. What should a visitor do?</h2>
       <div class="fieldset mt-5">
-        <div>
+        <div class="q">
           <label class="label" for="action">The one thing you want them to do</label>
           <span class="hint">Pick one. A site that asks for three things gets none of them.</span>
           <select class="field" id="action" name="Primary action" required>
@@ -158,9 +158,9 @@
             <option>Not sure — advise me</option>
           </select>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="pages">Which pages do you think you need?</label>
-          <span class="hint">Up to five are included. Most businesses do fine with Home, Services, About, and Contact. Tell me if you're not sure.</span>
+          <span class="hint">Up to five are included. Most businesses do fine with Home, Services, About and Contact. Tell me if you're not sure.</span>
           <textarea class="field" id="pages" name="Pages wanted"></textarea>
         </div>
       </div>
@@ -170,19 +170,19 @@
     <section>
       <h2 class="font-display text-2xl font-semibold text-slate">5. How it should look</h2>
       <div class="fieldset mt-5">
-        <div>
+        <div class="q">
           <label class="label" for="likes">Two or three sites you like</label>
-          <span class="hint">Any industry at all. They don't have to be competitors. A line on what you like about each is worth more than the links on their own.</span>
+          <span class="hint">Any industry at all — they don't have to be competitors. A line on what you like about each is worth more than the links on their own.</span>
           <textarea class="field" id="likes" name="Sites you like"></textarea>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="dislikes">Anything you definitely don't want</label>
           <span class="hint">Colours you hate, a competitor's site that puts you off, sliding banners, pop-ups. Useful to know early.</span>
           <textarea class="field" id="dislikes" name="Dislikes"></textarea>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="brand">Logo and colours</label>
-          <span class="hint">Have you got a logo? Any colours already in use, uniform or branding?</span>
+          <span class="hint">Have you got a logo? Any colours already in use on your van, uniform or signage?</span>
           <textarea class="field" id="brand" name="Logo and colours"></textarea>
         </div>
       </div>
@@ -192,12 +192,12 @@
     <section>
       <h2 class="font-display text-2xl font-semibold text-slate">6. Practical bits</h2>
       <div class="fieldset mt-5">
-        <div>
+        <div class="q">
           <label class="label" for="domain">Do you own a domain name?</label>
           <span class="hint">If yes, which one and where did you buy it. If no, tell me what you'd like and I'll check it's free.</span>
           <input class="field" type="text" id="domain" name="Domain" required>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="gbp">Google Business Profile</label>
           <select class="field" id="gbp" name="Google Business Profile">
             <option value="">Choose one…</option>
@@ -207,12 +207,12 @@
             <option>No idea what that is</option>
           </select>
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="deadline">Any date you need this live by?</label>
-          <span class="hint">A trade show, a season starting, a van getting signwritten. If there's no deadline, say so. That's fine too.</span>
+          <span class="hint">A trade show, a season starting, a van getting signwritten. If there's no deadline, say so — that's fine too.</span>
           <input class="field" type="text" id="deadline" name="Deadline">
         </div>
-        <div>
+        <div class="q">
           <label class="label" for="anything">Anything else I should know</label>
           <textarea class="field" id="anything" name="Anything else"></textarea>
         </div>
@@ -223,20 +223,20 @@
     <div class="rounded-2xl border border-river/30 bg-aqua/15 p-6">
       <h2 class="font-display text-xl font-semibold text-slate">Photos — send these separately</h2>
       <p class="mt-3 leading-relaxed">
-        Email them to <a href="mailto:hello@thatchamdigital.co.uk" class="font-semibold text-river underline">hello [a] thatchamdigital.co.uk</a>,
-        or use WeTransfer if there are a lot. Straight off your phone is fine: full size, not resized, and not
+        Email them to <a href="mailto:hello@thatchamdigital.co.uk" class="font-semibold text-river underline">hello@thatchamdigital.co.uk</a>,
+        or use WeTransfer if there are a lot. Straight off your phone is fine, full size, not resized, and not
         screenshots.
       </p>
       <p class="mt-3 leading-relaxed">
         Worth having: you or your team, your work or premises, and a few finished jobs. Real photos of real work beat
-        stock images every time, even slightly wonky ones.
+        stock images every time..
       </p>
     </div>
 
     <div class="pt-2">
       <button type="submit" class="btn-accent w-full sm:w-auto">Send it over</button>
       <p class="mt-4 text-sm leading-relaxed text-ink/65">
-        I'll read it and come back within two working days, either with questions or with a start date.
+        I'll read it properly and come back within two working days, either with questions or with a start date.
       </p>
     </div>
   </form>
