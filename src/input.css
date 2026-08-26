@@ -78,6 +78,56 @@
   .tick {
     @apply mt-1 h-5 w-5 shrink-0 text-peach;
   }
+
+  /* --- Form --- */
+  .label {
+    @apply block font-display text-lg font-semibold leading-snug text-slate;
+  }
+
+  .hint {
+    @apply mt-1.5 block text-sm leading-relaxed text-ink/60;
+  }
+
+  .field {
+    @apply mt-3.5 w-full rounded-xl border border-black/[0.14] bg-ivory px-4 py-3.5 text-base leading-normal text-ink transition-all;
+  }
+
+  .field::placeholder {
+    @apply text-ink/30;
+  }
+
+  .field:hover {
+    @apply border-black/25;
+  }
+
+  .field:focus {
+    @apply border-river bg-white outline-none;
+    box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.16);
+  }
+
+  textarea.field {
+    @apply min-h-[7.5rem] leading-relaxed;
+  }
+
+  select.field {
+    @apply cursor-pointer appearance-none bg-no-repeat pr-11;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%234A4A4A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 8 10 12.5 14.5 8'/%3E%3C/svg%3E");
+    background-position: right 1rem center;
+    background-size: 1.15rem;
+  }
+
+  /* Card holding a group of questions. Each .q inside is separated by a rule. */
+  .fieldset {
+    @apply rounded-2xl border border-black/[0.07] bg-white px-6 shadow-[0_2px_12px_-6px_rgba(38,70,83,0.12)] sm:px-8;
+  }
+
+  .q {
+    @apply border-t border-black/[0.06] py-7;
+  }
+
+  .q:first-child {
+    @apply border-t-0;
+  }
 }
 
 @keyframes blink {
